@@ -61,6 +61,4 @@
             android:onClick="loginGoogle"/>
 
     </LinearLayout>
-
-
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.appdevelopment;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -21,7 +22,8 @@ public class Login extends AppCompatActivity {
     }
 
     public void login(View v){
-
+        Intent intent = new Intent(this, Menu.class);
+        startActivity(intent);
     }
 
     public void loginGoogle(View v){
