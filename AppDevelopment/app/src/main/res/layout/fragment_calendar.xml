@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+<<<<<<< HEAD
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,4 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+=======
+>>>>>>> 195a4d0b793c9c40d5a52b9017fb41357775f937
 </LinearLayout>

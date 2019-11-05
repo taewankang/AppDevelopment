@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -64,5 +65,9 @@
 
 
     </ScrollView>
+=======
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+>>>>>>> 195a4d0b793c9c40d5a52b9017fb41357775f937
 
 </LinearLayout>
