@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">AppDevelopment</string>
     <string name="team_name">SIMPLE</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_alarm">Alarm</string>
+    <string name="title_member">Member</string>
+    <string name="title_project">Project</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_more">More</string>
 </resources>

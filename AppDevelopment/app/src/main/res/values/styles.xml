@@ -8,6 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Menu" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="NoTopMenu" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">#000000</item>
@@ -17,7 +23,7 @@
     <style name="SignUpTextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:layout_marginTop">15dp</item>
     </style>
 
@@ -39,7 +45,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/grey_background_rectangle</item>
         <item name="android:layout_marginTop">10dp</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:paddingLeft">20dp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
@@ -47,8 +53,12 @@
     <style name="Login_Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
+    <style name="Alarm_name">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
 </resources>
