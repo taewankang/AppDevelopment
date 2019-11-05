@@ -23,10 +23,7 @@ public class Login extends AppCompatActivity {
 
     public void login(View v){
         Intent intent = new Intent(this, Menu.class);
-<<<<<<< HEAD
         intent.putExtra("ID", ID.getText().toString());
-=======
->>>>>>> 195a4d0b793c9c40d5a52b9017fb41357775f937
         startActivity(intent);
     }
 

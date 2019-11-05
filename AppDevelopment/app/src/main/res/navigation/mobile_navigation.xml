@@ -17,12 +17,8 @@
 
     <fragment
         android:id="@+id/navigation_project"
-<<<<<<< HEAD
         android:name="com.example.appdevelopment.ui.project.ProjectFragment"
-=======
-        android:name="com.example.appdevelopment.ui.calendar.CalendarFragment"
->>>>>>> 195a4d0b793c9c40d5a52b9017fb41357775f937
-        tools:layout="@layout/fragment_calendar" />
+        android:layout="@layout/fragment_project"/>
 
     <fragment
         android:id="@+id/navigation_calendar"
