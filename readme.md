@@ -16,3 +16,7 @@ AppDevelopment - 실제 프로젝트
   - calendar
   - setting
 
+
+2019.11.06
+- 더 보기 레이아웃 구성
+- 
