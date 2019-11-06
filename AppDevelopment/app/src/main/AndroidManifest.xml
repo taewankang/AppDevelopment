@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoTopMenu">
+        <activity android:name=".ui.project.AddProject"></activity>
         <activity
             android:name=".Menu"
-            android:theme="@style/Menu"></activity>
+            android:theme="@style/Menu" />
         <activity android:name=".Start.SimpleSetting" />
         <activity android:name=".Login" />
         <activity

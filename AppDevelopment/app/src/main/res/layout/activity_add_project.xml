@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-
+    android:layout_height="match_parent"
+    tools:context=".ui.project.AddProject">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,6 +22,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/project_name_linear"
+        android:focusableInTouchMode="true"
         android:layout_below="@+id/project_name">
         <EditText
             android:layout_width="0dp"
@@ -52,27 +54,27 @@
         android:layout_below="@+id/project_member"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <EditText
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/add_member_textview"
-            android:layout_weight="10"/>
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_member_textview"
+                android:layout_weight="10"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:id="@+id/add_member_button"
-            android:background="@drawable/ic_action_add"/>
-    </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/add_member_button"
+                android:background="@drawable/ic_action_add"/>
+        </LinearLayout>
     </ScrollView>
     <Button
         android:layout_width="match_parent"
@@ -81,8 +83,7 @@
         android:layout_marginLeft="40dp"
         android:background="@drawable/purple_rectangle"
         android:layout_below="@+id/scrollView"
-        android:id="@+id/make_project"
+        android:onClick="onClick"
         android:layout_marginBottom="30dp"
         android:text="프로젝트 시작하기"/>
-
 </RelativeLayout>

@@ -24,7 +24,8 @@
         <EditText
             style="@style/Login_EditText"
             android:id="@+id/ID"
-            android:hint="아이디"/>
+            android:inputType="textEmailAddress"
+            android:hint="이메일"/>
 
         <EditText
             style="@style/Login_EditText"

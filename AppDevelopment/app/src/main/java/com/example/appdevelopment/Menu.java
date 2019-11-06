@@ -29,20 +29,15 @@ public class Menu extends AppCompatActivity {
         ID = intent.getStringExtra("ID");
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_alarm, R.id.navigation_member, R.id.navigation_project, R.id.navigation_calendar, R.id.navigation_more)
-                .build();
+//        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+//                R.id.navigation_alarm, R.id.navigation_member, R.id.navigation_project, R.id.navigation_calendar, R.id.navigation_more)
+//                .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        밑에 놈이 Toolbar를 설정하는 옵션임
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
     }
     @Override
     public void onStart(){
         super.onStart();
-//        AlarmFragment alarm = (AlarmFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_alarm);
         AlarmFragment.changeID(ID);
     }
 
