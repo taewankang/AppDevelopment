@@ -1,24 +1,18 @@
 package com.example.appdevelopment.ui.project;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.appdevelopment.MainActivity;
 import com.example.appdevelopment.R;
 
 import java.util.ArrayList;
@@ -28,16 +22,21 @@ public class ProjectFragment extends Fragment implements View.OnClickListener {
     Button button;
     Bundle bundle;
     Context context;
-    LinearLayout linear_project;
-    LinearLayout.LayoutParams lp;
+    RecyclerView recyclerView;
+    List<String> title = new ArrayList<String>();
+    List<String> mini_title = new ArrayList<String>();
+//    title: 제목  minititle: 소제목
+
     Button button_list;
+    int counting = 1;
+    String[] project_list = new String[10];
+    String[] memo_list = new String[10];
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_project, container, false);
         context = container.getContext();
         button = (Button)view.findViewById(R.id.add);
         button.setOnClickListener(this);
-        linear_project = (LinearLayout)view.findViewById(R.id.linear_project);
-        lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
         return view;
     }
 
@@ -56,10 +55,13 @@ public class ProjectFragment extends Fragment implements View.OnClickListener {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 0){
             String result = data.getStringExtra("string");
-            Toast.makeText(context, result, Toast.LENGTH_LONG).show();
-            Button but = new Button(context);
-            but.setText(result);
-            linear_project.addView(but, lp);
+            String project_name = data.getStringExtra("project_name");
+            title.add(project_name);
+            mini_title.add("OKAY");
+            RecyclerAdapter recyclerAdapters = new RecyclerAdapter(title, mini_title);
+            recyclerView = getActivity().findViewById(R.id.recyclerView);
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            recyclerView.setAdapter(recyclerAdapters);
         }
     }
 }

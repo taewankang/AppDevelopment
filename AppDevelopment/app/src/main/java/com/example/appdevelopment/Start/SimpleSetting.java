@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.appdevelopment.R;
+import com.example.appdevelopment.Schedule.ScheduleOneHour;
 
 public class SimpleSetting extends AppCompatActivity {
     Intent intent;
@@ -22,6 +23,7 @@ public class SimpleSetting extends AppCompatActivity {
         textView.setText(name + "님, 심플을 시작하기 전에 몇가지 사항을 설정해주세요.");
     }
     public void settingStart(View v){
-
+        Intent intent = new Intent(this, ScheduleOneHour.class);
+        startActivity(intent);
     }
 }

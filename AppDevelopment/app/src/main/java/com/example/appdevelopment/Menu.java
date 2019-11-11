@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -19,6 +20,7 @@ public class Menu extends AppCompatActivity {
     Intent intent;
     String ID;
     Bundle bundle = new Bundle();
+    FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class Menu extends AppCompatActivity {
         intent = getIntent();
         ID = intent.getStringExtra("ID");
         BottomNavigationView navView = findViewById(R.id.nav_view);
-
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
 //        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
 //                R.id.navigation_alarm, R.id.navigation_member, R.id.navigation_project, R.id.navigation_calendar, R.id.navigation_more)
 //                .build();
@@ -44,18 +46,15 @@ public class Menu extends AppCompatActivity {
     @Override
     public void onPause(){
         super.onPause();
-        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onStop(){
         super.onStop();
-        Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onDestroy(){
         super.onDestroy();
-        Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_LONG).show();
     }
 }

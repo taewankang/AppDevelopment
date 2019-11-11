@@ -40,6 +40,7 @@
         android:layout_marginRight="40dp"
         android:layout_marginTop="10dp">
         <LinearLayout
+            android:id="@+id/my_place"
             style="@style/more_first_linear">
             <LinearLayout
                 style="@style/more_second_linear">
@@ -60,6 +61,7 @@
                 </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_work"
             style="@style/more_first_linear">
             <LinearLayout
                 style="@style/more_second_linear">
@@ -80,6 +82,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/my_schedule"
             style="@style/more_first_linear">
             <LinearLayout
                 style="@style/more_second_linear">
@@ -98,6 +101,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/setting"
             style="@style/more_first_linear">
             <LinearLayout
                 style="@style/more_second_linear">
@@ -115,6 +119,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/question"
             style="@style/more_first_linear">
             <LinearLayout
                 style="@style/more_second_linear">

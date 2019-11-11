@@ -64,6 +64,20 @@
                     android:inputType="textEmailAddress"
                     android:id="@+id/email"/>
              </LinearLayout>
+             <LinearLayout
+                 style="@style/match_wrap_ver_LinearLayout"
+                 android:focusableInTouchMode="true"
+                 android:id="@+id/fourth"
+                 android:layout_below="@+id/third">
+                 <TextView
+                     style="@style/SignUpTextView"
+                     android:text="학교"/>
+                 <EditText
+                     style="@style/SignUpEditText"
+                     android:inputType="textEmailAddress"
+                     android:id="@+id/school"/>
+             </LinearLayout>
+
              <Button
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
@@ -73,7 +87,7 @@
                  android:layout_marginTop="80dp"
                  android:layout_marginBottom="50dp"
                  android:onClick="signUpFinish"
-                 android:layout_below="@+id/third"/>
+                 android:layout_below="@+id/fourth"/>
          </RelativeLayout>
     </LinearLayout>
 </ScrollView>
