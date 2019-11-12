@@ -21,12 +21,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     List<String> title = new ArrayList<String>();
     List<String> mini_title = new ArrayList<String>();
     int counting = 0;
+
     public RecyclerAdapter(List<String> str1, List<String> str2){
         this.title = str1;
         this.mini_title = str2;
         this.counting = counting;
     }
-
+    
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
@@ -58,4 +59,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             smallTextView = itemView.findViewById(R.id.small_textView);
         }
     }
+
+
 }
+

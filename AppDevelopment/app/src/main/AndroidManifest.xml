@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoTopMenu">
-        <activity android:name=".ui.project.ProjectList"></activity>
+        <activity android:name=".Start.SimpleStationSetting"></activity>
+        <activity android:name=".ui.project.ProjectList" />
         <activity android:name=".ui.project.AddProject2" />
-        <activity android:name=".Schedule.ScheduleOneHour" />
+        <activity android:name=".Start.ScheduleOneHour" />
         <activity android:name=".ui.project.AddProject" />
         <activity
             android:name=".Menu"

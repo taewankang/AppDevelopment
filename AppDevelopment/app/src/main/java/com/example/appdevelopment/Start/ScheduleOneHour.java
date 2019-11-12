@@ -1,19 +1,32 @@
-package com.example.appdevelopment.Schedule;
+package com.example.appdevelopment.Start;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
 import com.example.appdevelopment.R;
+
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class ScheduleOneHour extends AppCompatActivity {
     boolean[][] scheduler = new boolean[10][6];
+    Map<String, Map<String, List<Integer>>> map= new HashMap<String, Map<String, List<Integer>>>();
+    TextView textView;
+    String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule_one_hour);
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name").toString();
+        textView = findViewById(R.id.my_name);
+        textView.setText(name + " 님의 시간표");
         for(int i=0; i<10; i++){
             for(int j=0; j<6; j++)
                 scheduler[i][j] = false;
@@ -24,6 +37,27 @@ public class ScheduleOneHour extends AppCompatActivity {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("스케줄 추가");
         alertDialog.show();
+    }
+
+    public void nextButton(View view){
+        Intent intent = new Intent(this, SimpleStationSetting.class);
+        Map<String, List<Integer>> day = new HashMap<>();
+        for(int i=1; i<6; i++){
+            List<Integer> lists = new ArrayList<Integer>();
+            for(int j=1; j<10; j++) {
+                if(scheduler[j][i] == true) {
+                    lists.add(j);
+                }
+            }
+            if(i == 1) day.put("Monday", lists);
+            else if(i == 2) day.put("Tuesday", lists);
+            else if(i == 3) day.put("Wednesday", lists);
+            else if(i == 4) day.put("Thursday", lists);
+            else if(i == 5) day.put("Friday", lists);
+        }
+        map.put("Scheduler", day);
+        intent.putExtra("name", name);
+        startActivity(intent);
     }
 
     public void onClick(View view) {
@@ -172,11 +206,12 @@ public class ScheduleOneHour extends AppCompatActivity {
                 break;
         }
     }
-    
+
     public void changeColor(int i, int j, View view){
         if(scheduler[i][j] == false) {
             view.setBackground(ContextCompat.getDrawable(this, R.drawable.scheduler_button_background));
             scheduler[i][j] = true;
+
         }else{
             view.setBackground(ContextCompat.getDrawable(this, R.drawable.border_line));
             scheduler[i][j] = false;

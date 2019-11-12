@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -25,18 +26,14 @@ public class ProjectFragment extends Fragment implements View.OnClickListener {
     RecyclerView recyclerView;
     List<String> title = new ArrayList<String>();
     List<String> mini_title = new ArrayList<String>();
+    List<Button> button_list = new ArrayList<Button>();
 //    title: 제목  minititle: 소제목
-
-    Button button_list;
     int counting = 1;
-    String[] project_list = new String[10];
-    String[] memo_list = new String[10];
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_project, container, false);
         context = container.getContext();
         button = (Button)view.findViewById(R.id.add);
         button.setOnClickListener(this);
-
         return view;
     }
 
@@ -60,8 +57,10 @@ public class ProjectFragment extends Fragment implements View.OnClickListener {
             mini_title.add("OKAY");
             RecyclerAdapter recyclerAdapters = new RecyclerAdapter(title, mini_title);
             recyclerView = getActivity().findViewById(R.id.recyclerView);
+
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             recyclerView.setAdapter(recyclerAdapters);
         }
     }
 }
+
