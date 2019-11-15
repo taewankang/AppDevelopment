@@ -21,7 +21,7 @@
                 style="@style/Alarm_name"
                 android:gravity="center"
                 android:id="@+id/name"
-                android:textSize="15dp"/>
+                android:textSize="15sp"/>
         </FrameLayout>
 
         <Button

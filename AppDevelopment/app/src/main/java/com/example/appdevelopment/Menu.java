@@ -3,9 +3,11 @@ package com.example.appdevelopment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.appdevelopment.ui.alarm.AlarmFragment;
+import com.example.appdevelopment.ui.project.ProjectFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +18,17 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Menu extends AppCompatActivity {
     Intent intent;
-    String ID;
+    static String ID;
     Bundle bundle = new Bundle();
     FragmentTransaction fragmentTransaction;
+//    프로젝트 변수
+    private static List<String> project_title = new ArrayList<String>();
+    private static List<String> project_mini_title = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +39,10 @@ public class Menu extends AppCompatActivity {
         ID = intent.getStringExtra("ID");
         BottomNavigationView navView = findViewById(R.id.nav_view);
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.navigation_alarm, R.id.navigation_member, R.id.navigation_project, R.id.navigation_calendar, R.id.navigation_more)
-//                .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
     }
+
     @Override
     public void onStart(){
         super.onStart();
@@ -57,4 +63,16 @@ public class Menu extends AppCompatActivity {
     public void onDestroy(){
         super.onDestroy();
     }
+
+    public static String getID(){
+        return ID;
+    }
+
+    public static void setProjectList(List<String> title, List<String> mini_title){
+        project_title = ProjectFragment.getTitle();
+        project_mini_title = ProjectFragment.getMiniTitle();
+    }
+
+    public static List<String> get_Title(){return project_title;}
+    public static List<String> get_mini_title(){return project_mini_title;}
 }

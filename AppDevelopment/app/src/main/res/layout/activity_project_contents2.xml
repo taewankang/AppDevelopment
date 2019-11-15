@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".ProjectContents2">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/name_button">
+            <ImageButton
+                style="@style/Alarm_name"
+                android:background="@drawable/pink_circle" />
+            <TextView
+                style="@style/Alarm_name"
+                android:gravity="center"
+                android:id="@+id/name"
+                android:textSize="15sp"/>
+        </FrameLayout>
+        <Button
+            android:id="@+id/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@+id/add"
+            android:background="@drawable/ic_action_delete"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/add"
+            android:background="@drawable/ic_action_add"/>
+    </RelativeLayout>
+    <FrameLayout
+        style="@style/activity_project_contents2_frameLayout"
+        android:background="@drawable/deep_rount_rectangle3">
+        <LinearLayout
+            style="@style/activity_project_contents2_linearLayout">
+            <ImageView
+                style="@style/activity_project_contents2_imageView"
+                android:id="@+id/alarm_imageView"/>
+            <TextView
+                style="@style/activity_project_contents2_textView"
+                android:text="알람 모아보기"/>
+            <Button
+                style="@style/activity_project_contents2_button"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        style="@style/activity_project_contents2_frameLayout"
+        android:background="@drawable/deep_rount_rectangle3">
+        <LinearLayout
+            style="@style/activity_project_contents2_linearLayout">
+            <ImageView
+                style="@style/activity_project_contents2_imageView"
+                android:id="@+id/ppt_imageView"/>
+            <TextView
+                style="@style/activity_project_contents2_textView"
+                android:text="PPT 모아보기"/>
+            <Button
+                style="@style/activity_project_contents2_button"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        style="@style/activity_project_contents2_frameLayout"
+        android:background="@drawable/deep_rount_rectangle3">
+        <LinearLayout
+            style="@style/activity_project_contents2_linearLayout">
+            <ImageView
+                style="@style/activity_project_contents2_imageView"
+                android:id="@+id/pdf_imageView"/>
+            <TextView
+                style="@style/activity_project_contents2_textView"
+                android:text="PDF 모아보기"/>
+            <Button
+                style="@style/activity_project_contents2_button"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        style="@style/activity_project_contents2_frameLayout"
+        android:background="@drawable/deep_rount_rectangle3">
+        <LinearLayout
+            style="@style/activity_project_contents2_linearLayout">
+            <ImageView
+                style="@style/activity_project_contents2_imageView"
+                android:id="@+id/document_imageView"/>
+            <TextView
+                style="@style/activity_project_contents2_textView"
+                android:text="문서 모아보기"/>
+            <Button
+                style="@style/activity_project_contents2_button"/>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

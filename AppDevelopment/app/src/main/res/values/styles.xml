@@ -126,4 +126,37 @@
         <item name="android:clickable">true</item>
         <item name="android:onClick">onClick</item>
     </style>
+
+<!--    acticity_project_contents2-->
+    <style name="activity_project_contents2_frameLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="activity_project_contents2_linearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="activity_project_contents2_imageView">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="activity_project_contents2_textView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">10</item>
+    </style>
+
+    <style name="activity_project_contents2_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/ic_action_dropdown</item>
+    </style>
 </resources>
