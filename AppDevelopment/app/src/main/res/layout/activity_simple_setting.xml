@@ -17,6 +17,13 @@
         android:textStyle="bold"
         android:id="@+id/textView"/>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:layout_below="@+id/textView"
+        android:layout_above="@+id/next_button"
+        android:background="@drawable/ic_action_done"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +34,6 @@
         android:background="#000000"
         android:textColor="#FFFFFF"
         android:text="@string/team_name"
+        android:id="@+id/next_button"
         android:onClick="settingStart"/>
-
-
 </RelativeLayout>

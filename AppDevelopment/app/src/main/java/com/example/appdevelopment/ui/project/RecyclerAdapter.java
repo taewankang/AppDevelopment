@@ -1,14 +1,15 @@
 package com.example.appdevelopment.ui.project;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.appdevelopment.R;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,8 +70,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 public void onClick(View v){
                     int pos = getAdapterPosition();
                     if(pos != RecyclerView.NO_POSITION){
-                        Log.i("superdroid", pos+"");        //몇번째를 눌렀는지에 대한 정보를 pos가 가지고 있음
-                        Intent intent  = new Intent(v.getContext(), ProjectContents.class);
+                        Intent intent = new Intent(v.getContext(), ProjectContents2.class);
+                        String str = title.get(pos);
+                        String str1 = title.get(pos).toString();    //이름 넘기기
+                        intent.putExtra("project_name", title.get(pos).toString());
                         context.startActivity(intent);
                         notifyItemChanged(pos);
                     }

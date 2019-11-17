@@ -217,4 +217,8 @@ public class ScheduleOneHour extends AppCompatActivity {
             scheduler[i][j] = false;
         }
     }
+
+    public void skip(View view) {
+
+    }
 }

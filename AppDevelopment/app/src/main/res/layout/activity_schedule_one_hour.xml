@@ -276,7 +276,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_gravity="center_vertical"
-        android:layout_weight="1">
+        android:orientation="vertical"
+        android:layout_weight="1.5">
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -284,6 +285,14 @@
             android:text="시간 선택 완료"
             android:id="@+id/next"
             android:onClick="nextButton"
+            android:textColor="#FFFFFF"
+            android:background="#000000"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="넘어가기"
+            android:layout_marginTop="20dp"
+            android:onClick="skip"
             android:textColor="#FFFFFF"
             android:background="#000000"/>
     </LinearLayout>

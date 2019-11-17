@@ -50,19 +50,16 @@ public class ProjectFragment extends Fragment implements View.OnClickListener {
         super.onStart();
         addViewer();
         name_textView.setText(Menu.getID());
-        Toast.makeText(getContext(), title.size() + " ", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onStop(){
         super.onStop();
-        Toast.makeText(getContext(), "onStop", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onDestroy(){
         super.onDestroy();
-        Toast.makeText(getContext(), "onDestroy()", Toast.LENGTH_LONG).show();
     }
 
     @Override

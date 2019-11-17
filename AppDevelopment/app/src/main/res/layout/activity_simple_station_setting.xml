@@ -37,4 +37,25 @@
             android:id="@+id/station"
             android:gravity="center"/>
     </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="setting_finish"
+        android:text="설정 완료"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="넘어가기"
+        android:onClick="skip"/>
+
 </LinearLayout>

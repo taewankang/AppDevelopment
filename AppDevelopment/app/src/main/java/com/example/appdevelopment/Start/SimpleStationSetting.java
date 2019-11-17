@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.appdevelopment.Login;
 import com.example.appdevelopment.R;
 
 public class SimpleStationSetting extends AppCompatActivity {
@@ -38,6 +39,17 @@ public class SimpleStationSetting extends AppCompatActivity {
 //
 //            }
 //        });
+    }
+
+
+    public void setting_finish(View view) { //설정 값을 디비에 넣을 부분
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
+    public void skip(View view) {       //그냥 넘어감
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
 
 

@@ -1,4 +1,4 @@
-package com.example.appdevelopment;
+package com.example.appdevelopment.ui.project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.appdevelopment.R;
 
 public class ProjectContents2 extends AppCompatActivity {
     String project_name;
