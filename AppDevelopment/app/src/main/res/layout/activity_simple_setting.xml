@@ -31,7 +31,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="40dp"
-        android:background="#000000"
+        android:background="@drawable/pink_project_button"
         android:textColor="#FFFFFF"
         android:text="@string/team_name"
         android:id="@+id/next_button"

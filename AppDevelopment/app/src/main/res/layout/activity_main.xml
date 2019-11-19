@@ -29,14 +29,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/MainActivity_Button"
+            android:background="@drawable/pink_project_button"
             android:onClick="signUp"
             android:text="회원가입"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/MainActivity_Button"
+            android:background="@drawable/pink_project_button"
             android:onClick="login"
             android:text="로그인"/>
     </LinearLayout>

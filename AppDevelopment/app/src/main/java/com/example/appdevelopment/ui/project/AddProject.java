@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.appdevelopment.Menu;
 import com.example.appdevelopment.R;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class AddProject extends AppCompatActivity {
     LinearLayout linearLayout;
     LinearLayout.LayoutParams params;
     List<String> list = new ArrayList<String>();
+    List<String> member_list = new ArrayList<>();
     ImageView imageView;
 
     @Override
@@ -39,6 +41,7 @@ public class AddProject extends AppCompatActivity {
         Intent intent = new Intent();
         intent.putExtra("string", editText.getText().toString());
         intent.putExtra("project_name", edit_project_name.getText().toString());
+        Menu.set_member_list(edit_project_name.getText().toString(), member_list);
         setResult(0, intent);
         finish();
     }
@@ -50,6 +53,7 @@ public class AddProject extends AppCompatActivity {
         textview.setTextSize(1, 25);
         textview2.setBackground(ContextCompat.getDrawable(this, R.drawable.border_line2));
         textview.setText(editText.getText().toString());
+        member_list.add(editText.getText().toString());
         editText.setText("");
         linearLayout.addView(textview);
         linearLayout.addView(textview2);

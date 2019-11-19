@@ -56,7 +56,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
-        android:text="프로젝트 멤버"
+        android:text="멤버 이메일"
         android:id="@+id/project_member"
         android:layout_below="@+id/project_name_linear"/>
     <LinearLayout
@@ -98,6 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/scroll_linear"
+            android:layout_marginRight="30dp"
             android:orientation="vertical">
         </LinearLayout>
     </ScrollView>
@@ -106,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
-        android:background="@drawable/purple_rectangle"
+        android:background="@drawable/pink_project_button"
         android:layout_below="@+id/scrollView"
         android:onClick="onClick"
         android:layout_marginTop="20dp"

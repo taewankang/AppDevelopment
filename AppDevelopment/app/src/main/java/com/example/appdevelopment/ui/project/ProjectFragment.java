@@ -69,6 +69,9 @@ public class ProjectFragment extends Fragment implements View.OnClickListener {
                 Intent intent = new Intent(getContext(), AddProject.class);
                 startActivityForResult(intent, 0);
                 break;
+            case R.id.delete:
+
+                break;
         }
     }
 

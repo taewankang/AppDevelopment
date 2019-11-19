@@ -1,11 +1,16 @@
 package com.example.appdevelopment.ui.project;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +27,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     int counting = 0;
     Context context;
     private OnItemClickListener mListener = null;
+    AlertDialog.Builder alertDialog;
     public interface OnItemClickListener{
         void onItemClick(View v, int position);
     }
@@ -57,19 +63,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return title.size();
     }       //list몇개 출력한건지
 
-    class ViewHolder extends RecyclerView.ViewHolder{       //아이디값 인스턴스 변수에 대입
+    public class ViewHolder extends RecyclerView.ViewHolder {       //아이디값 인스턴스 변수에 대입
         public TextView largeTextView;
         public TextView smallTextView;
+
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
             largeTextView = itemView.findViewById(R.id.large_textView);
             smallTextView = itemView.findViewById(R.id.small_textView);
-            itemView.setOnClickListener(new View.OnClickListener(){     //누르는 이벤트 발생
+            itemView.setOnClickListener(new View.OnClickListener() {     //누르는 이벤트 발생
                 @Override
-                public void onClick(View v){
+                public void onClick(View v) {
                     int pos = getAdapterPosition();
-                    if(pos != RecyclerView.NO_POSITION){
+                    if (pos != RecyclerView.NO_POSITION) {
                         Intent intent = new Intent(v.getContext(), ProjectContents2.class);
                         String str = title.get(pos);
                         String str1 = title.get(pos).toString();    //이름 넘기기
@@ -77,6 +84,25 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                         context.startActivity(intent);
                         notifyItemChanged(pos);
                     }
+                }
+            });
+            itemView.setLongClickable(true);
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    int pos = getAdapterPosition();
+                    alertDialog = new AlertDialog.Builder(context);
+                    alertDialog.setMessage("새로운 프로젝트 생성");
+                    alertDialog.setTitle(title.get(pos).toString());
+                    alertDialog.setView(R.layout.new_project_dialog);
+                    alertDialog.setPositiveButton("일정 생성하기", new DialogInterface.OnClickListener() {
+                        Dialog dialog;
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                        }
+                    });
+                    alertDialog.show();
+                    return true;
                 }
             });
         }
