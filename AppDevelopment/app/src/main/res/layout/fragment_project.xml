@@ -30,6 +30,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_toLeftOf="@+id/add"
+            android:layout_marginRight="10dp"
             android:background="@drawable/ic_action_delete"/>
 
         <Button

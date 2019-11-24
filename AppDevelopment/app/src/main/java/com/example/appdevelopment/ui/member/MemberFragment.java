@@ -43,26 +43,20 @@ public class MemberFragment extends Fragment {
     }
 
     public void  onStart(){
-        LinearLayout linearLayout;
-        view = getView();
-        linearLayout = (LinearLayout)view.findViewById(R.id.member_linear);
-
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-
         super.onStart();
+        view = getView();
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
         name_textView.setText(Menu.getID());
         for(int i=0; i<project_title.size(); i++){
             view = layoutInflater.inflate(R.layout.member_project__name, null, false);
             TextView textView = (TextView)view.findViewById(R.id.title);
             textView.setText(project_title.get(i));
             linearLayout.addView(view);
-            Log.d("names", project_title.get(i));
             for(int j=0; j<name_list.get(project_title.get(i)).size(); j++) {
                 view = layoutInflater.inflate(R.layout.activity_member_list, null, false);
                 TextView textView2 = (TextView)view.findViewById(R.id.member);
                 textView2.setText(name_list.get(project_title.get(i)).get(j).toString() + "");
                 linearLayout.addView(view);
-                Log.d("names", name_list.get(project_title.get(i)).get(j) + "");
             }
         }
     }

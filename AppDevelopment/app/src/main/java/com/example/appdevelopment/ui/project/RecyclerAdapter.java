@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -86,25 +87,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     }
                 }
             });
-            itemView.setLongClickable(true);
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    int pos = getAdapterPosition();
-                    alertDialog = new AlertDialog.Builder(context);
-                    alertDialog.setMessage("새로운 프로젝트 생성");
-                    alertDialog.setTitle(title.get(pos).toString());
-                    alertDialog.setView(R.layout.new_project_dialog);
-                    alertDialog.setPositiveButton("일정 생성하기", new DialogInterface.OnClickListener() {
-                        Dialog dialog;
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                        }
-                    });
-                    alertDialog.show();
-                    return true;
-                }
-            });
+//            itemView.setLongClickable(true);
+//            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+//                @Override
+//                public boolean onLongClick(View view) {
+//                    int pos = getAdapterPosition();
+////                    alertDialog = new AlertDialog.Builder(context);
+////                    alertDialog.setMessage("프로젝트 일정 생성");
+////                    alertDialog.setTitle(title.get(pos).toString());
+////                    alertDialog.setView(R.layout.new_project_dialog);
+////
+////                    alertDialog.setPositiveButton("일정 생성하기", new DialogInterface.OnClickListener() {
+////                        @Override
+////                        public void onClick(DialogInterface dialogInterface, int i) {
+////
+////                            dialogInterface.dismiss();
+////                        }
+////                    });
+////                    alertDialog.show();
+//                    return true;
+//                }
+//            });
         }
     }
 }

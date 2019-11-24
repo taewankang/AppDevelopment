@@ -42,7 +42,7 @@ public class AddProject extends AppCompatActivity {
         intent.putExtra("string", editText.getText().toString());
         intent.putExtra("project_name", edit_project_name.getText().toString());
         Menu.set_member_list(edit_project_name.getText().toString(), member_list);
-        setResult(0, intent);
+        setResult(RESULT_OK, intent);
         finish();
     }
 
@@ -57,5 +57,12 @@ public class AddProject extends AppCompatActivity {
         editText.setText("");
         linearLayout.addView(textview);
         linearLayout.addView(textview2);
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent();
+        setResult(RESULT_CANCELED, intent);
+        super.onBackPressed();
     }
 }

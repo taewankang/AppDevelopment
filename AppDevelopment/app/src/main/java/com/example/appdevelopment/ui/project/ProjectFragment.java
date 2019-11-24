@@ -3,6 +3,7 @@ package com.example.appdevelopment.ui.project;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProjectFragment extends Fragment implements View.OnClickListener {
+    private final int ADD = 0;
+    private final int RESULT_OK = -1;
     Button button;
     Bundle bundle;
     Context context;
@@ -67,7 +70,7 @@ public class ProjectFragment extends Fragment implements View.OnClickListener {
         switch(v.getId()){
             case R.id.add:
                 Intent intent = new Intent(getContext(), AddProject.class);
-                startActivityForResult(intent, 0);
+                startActivityForResult(intent, ADD);
                 break;
             case R.id.delete:
 
@@ -78,12 +81,14 @@ public class ProjectFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 0){
-            String result = data.getStringExtra("string");
-            String project_name = data.getStringExtra("project_name");
-            title.add(project_name);
-            mini_title.add("OKAY");
-            addViewer();
+        if(requestCode == ADD){
+            if(resultCode == RESULT_OK) {
+                String result = data.getStringExtra("string");
+                String project_name = data.getStringExtra("project_name");
+                title.add(project_name);
+                mini_title.add("OKAY");
+                addViewer();
+            }
         }
     }
 

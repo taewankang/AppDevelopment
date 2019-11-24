@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#44547f">
+        android:background="@drawable/alarm_background">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,7 +20,7 @@
                 <ImageButton
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/kakao"
+                    android:background="@drawable/ic_action_person"
                     android:id="@+id/image_view"/>
                 <ImageButton
                     android:layout_width="30dp"
@@ -46,7 +46,7 @@
                 style="@style/more_second_linear">
                 <ImageView
                     style="@style/more_Image_view"
-                    android:background="@drawable/ic_action_pen"/>
+                    android:background="@drawable/ic_action_location"/>
             </LinearLayout>
             <LinearLayout
                 style="@style/more_third_linear"/>
@@ -57,6 +57,7 @@
                         android:text="내 장소"/>
                     <TextView
                         style="@style/more_textView"
+                        android:textSize="8dp"
                         android:text="무슨 역?"/>
                 </LinearLayout>
         </LinearLayout>
@@ -78,6 +79,7 @@
                     android:text="내 할일"/>
                 <TextView
                     style="@style/more_textView"
+                    android:textSize="8dp"
                     android:text="내 할일은?"/>
             </LinearLayout>
         </LinearLayout>
@@ -88,7 +90,7 @@
                 style="@style/more_second_linear">
                 <ImageView
                     style="@style/more_Image_view"
-                    android:background="@drawable/ic_action_pen"/>
+                    android:background="@drawable/ic_action_schedule"/>
             </LinearLayout>
             <LinearLayout
                 style="@style/more_third_linear"/>
@@ -107,7 +109,7 @@
                 style="@style/more_second_linear">
                 <ImageView
                     style="@style/more_Image_view"
-                    android:background="@drawable/ic_action_pen"/>
+                    android:background="@drawable/ic_action_setting"/>
             </LinearLayout>
             <LinearLayout
                 style="@style/more_third_linear"/>
@@ -125,7 +127,7 @@
                 style="@style/more_second_linear">
                 <ImageView
                     style="@style/more_Image_view"
-                    android:background="@drawable/ic_action_pen"/>
+                    android:background="@drawable/ic_action_error"/>
             </LinearLayout>
             <LinearLayout
                 style="@style/more_third_linear"/>

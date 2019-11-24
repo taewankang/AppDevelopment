@@ -65,21 +65,24 @@
     
     <style name="more_first_linear">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="more_second_linear">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="more_Image_view">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:adjustViewBounds">true</item>
     </style>
 
     <style name="more_third_linear">
@@ -90,14 +93,16 @@
 
     <style name="more_fourth_linear">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">35dp</item>
         <item name="android:layout_weight">5</item>
+        <item name="android:gravity">center_vertical</item>
         <item name="android:orientation">vertical</item>
     </style>
 
     <style name="more_textView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:textSize">15dp</item>
         <item name="android:gravity">center_vertical</item>
     </style>
 

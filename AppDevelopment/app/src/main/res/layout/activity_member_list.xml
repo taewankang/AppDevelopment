@@ -8,24 +8,25 @@
     tools:context=".ui.member.MemberList">
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="30dp"
         android:id="@+id/profile"
         android:background="@drawable/ic_action_person"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_toLeftOf="@+id/message"
         android:layout_toRightOf="@+id/profile"
         android:layout_marginLeft="30dp"
-        android:textSize="20dp"
+        android:textStyle="normal"
+        android:textSize="30dp"
         android:id="@+id/member"/>
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="30dp"
         android:id="@+id/message"

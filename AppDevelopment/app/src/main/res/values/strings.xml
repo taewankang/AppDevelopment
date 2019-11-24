@@ -129,6 +129,5 @@
         <item>30분 전</item>
     </string-array>
 
-    <string-array name="nearest_station">
-    </string-array>
+    <string-array name="nearest_station"></string-array>
 </resources>

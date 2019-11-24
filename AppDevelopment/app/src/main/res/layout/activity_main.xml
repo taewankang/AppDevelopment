@@ -32,6 +32,7 @@
             android:background="@drawable/pink_project_button"
             android:onClick="signUp"
             android:text="회원가입"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
