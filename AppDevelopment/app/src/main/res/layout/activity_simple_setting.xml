@@ -13,8 +13,9 @@
         android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:textSize="30dp"
+        android:textSize="25sp"
         android:textStyle="bold"
+        android:fontFamily=""
         android:id="@+id/textView"/>
 
     <ImageView
@@ -27,13 +28,38 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/pink_project_button"
         android:textColor="#FFFFFF"
-        android:text="@string/team_name"
+        android:text="APLUS 설정하기"
         android:id="@+id/next_button"
+        android:fontFamily="@font/kopubdotumbold"
+        android:layout_above="@+id/next_setting"
         android:onClick="settingStart"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/pink_project_button"
+        android:text="다음에 설정하기"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/kopubdotumbold"
+        android:layout_above="@+id/text"
+        android:id="@+id/next_setting"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="더보기 > 내 장소, 내시간표에서 설정 가능"
+        android:textSize="8sp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:id="@+id/text"
+        android:textColor="#465FB5"/>
 </RelativeLayout>

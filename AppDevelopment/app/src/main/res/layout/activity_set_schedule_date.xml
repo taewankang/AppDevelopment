@@ -42,14 +42,6 @@
             android:descendantFocusability="blocksDescendants"
             android:layout_weight="1"/>
     </LinearLayout>
-    <!--    <DatePicker-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:datePickerMode="spinner"-->
-<!--        android:calendarViewShown="false"/>-->
-
-
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,6 +50,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp"
         android:onClick="setting_finish"
+        android:fontFamily="@font/kopubdotumbold"
         android:background="@drawable/pink_project_button"/>
 
 

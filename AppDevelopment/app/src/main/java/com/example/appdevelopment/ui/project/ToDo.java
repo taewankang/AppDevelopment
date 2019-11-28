@@ -1,4 +1,4 @@
-package com.example.appdevelopment;
+package com.example.appdevelopment.ui.project;
 
 public class ToDo {
     private int year, month, day, hour, min, meeting; //location은 보낸준 값에서 순서번째를 저장

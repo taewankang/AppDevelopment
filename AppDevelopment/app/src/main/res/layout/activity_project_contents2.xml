@@ -48,74 +48,99 @@
         android:id="@+id/project_name"
         android:layout_marginTop="20dp"
         android:textSize="30dp"/>
-
-    <FrameLayout
-        style="@style/activity_project_contents2_frameLayout"
-        android:background="@drawable/deep_rount_rectangle3">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <LinearLayout
-            style="@style/activity_project_contents2_linearLayout">
-            <ImageView
-                style="@style/activity_project_contents2_imageView"
-                android:background="@drawable/ic_action_notification2"
-                android:id="@+id/alarm_imageView"/>
-            <TextView
-                style="@style/activity_project_contents2_textView"
-                android:text="알람 모아보기"/>
-            <Button
-                style="@style/activity_project_contents2_button"/>
-        </LinearLayout>
-    </FrameLayout>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                style="@style/activity_project_contents2_frameLayout"
+                android:background="@drawable/deep_rount_rectangle3">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <LinearLayout
+                    style="@style/activity_project_contents2_linearLayout">
+                    <ImageView
+                        style="@style/activity_project_contents2_imageView"
+                        android:background="@drawable/ic_action_notification2"
+                        android:id="@+id/alarm_imageView"/>
+                    <TextView
+                        style="@style/activity_project_contents2_textView"
+                        android:text="알람 모아보기"/>
+                    <Button
+                        android:onClick="open_click"
+                        style="@style/activity_project_contents2_button"/>
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/linear_schedule">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/horizontal_linear_schedule">
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
 
-    <FrameLayout
-        style="@style/activity_project_contents2_frameLayout"
-        android:background="@drawable/deep_rount_rectangle3">
-        <LinearLayout
-            style="@style/activity_project_contents2_linearLayout">
-            <ImageView
-                style="@style/activity_project_contents2_imageView"
-                android:background="@drawable/ic_action_ppt"
-                android:id="@+id/ppt_imageView"/>
-            <TextView
-                style="@style/activity_project_contents2_textView"
-                android:text="PPT 모아보기"/>
-            <Button
-                style="@style/activity_project_contents2_button"/>
-        </LinearLayout>
-    </FrameLayout>
+            <FrameLayout
+                style="@style/activity_project_contents2_frameLayout"
+                android:background="@drawable/deep_rount_rectangle3">
+                <LinearLayout
+                    style="@style/activity_project_contents2_linearLayout">
+                    <ImageView
+                        style="@style/activity_project_contents2_imageView"
+                        android:background="@drawable/ic_action_ppt"
+                        android:id="@+id/ppt_imageView"/>
+                    <TextView
+                        style="@style/activity_project_contents2_textView"
+                        android:text="PPT 모아보기"/>
+                    <Button
+                        style="@style/activity_project_contents2_button"/>
+                </LinearLayout>
+            </FrameLayout>
 
-    <FrameLayout
-        style="@style/activity_project_contents2_frameLayout"
-        android:background="@drawable/deep_rount_rectangle3">
-        <LinearLayout
-            style="@style/activity_project_contents2_linearLayout">
-            <ImageView
-                style="@style/activity_project_contents2_imageView"
-                android:background="@drawable/ic_action_pdf"
-                android:id="@+id/pdf_imageView"/>
-            <TextView
-                style="@style/activity_project_contents2_textView"
-                android:text="PDF 모아보기"/>
-            <Button
-                style="@style/activity_project_contents2_button"/>
-        </LinearLayout>
-    </FrameLayout>
+            <FrameLayout
+                style="@style/activity_project_contents2_frameLayout"
+                android:background="@drawable/deep_rount_rectangle3">
+                <LinearLayout
+                    style="@style/activity_project_contents2_linearLayout">
+                    <ImageView
+                        style="@style/activity_project_contents2_imageView"
+                        android:background="@drawable/ic_action_pdf"
+                        android:id="@+id/pdf_imageView"/>
+                    <TextView
+                        style="@style/activity_project_contents2_textView"
+                        android:text="PDF 모아보기"/>
+                    <Button
+                        style="@style/activity_project_contents2_button"/>
+                </LinearLayout>
+            </FrameLayout>
 
-    <FrameLayout
-        style="@style/activity_project_contents2_frameLayout"
-        android:background="@drawable/deep_rount_rectangle3">
-        <LinearLayout
-            style="@style/activity_project_contents2_linearLayout">
-            <ImageView
-                style="@style/activity_project_contents2_imageView"
-                android:background="@drawable/ic_action_description"
-                android:id="@+id/document_imageView"/>
-            <TextView
-                style="@style/activity_project_contents2_textView"
-                android:text="문서 모아보기"/>
-            <Button
-                style="@style/activity_project_contents2_button"/>
+            <FrameLayout
+                style="@style/activity_project_contents2_frameLayout"
+                android:background="@drawable/deep_rount_rectangle3">
+                <LinearLayout
+                    style="@style/activity_project_contents2_linearLayout">
+                    <ImageView
+                        style="@style/activity_project_contents2_imageView"
+                        android:background="@drawable/ic_action_description"
+                        android:id="@+id/document_imageView"/>
+                    <TextView
+                        style="@style/activity_project_contents2_textView"
+                        android:text="문서 모아보기"/>
+                    <Button
+                        style="@style/activity_project_contents2_button"/>
+                </LinearLayout>
+            </FrameLayout>
         </LinearLayout>
-    </FrameLayout>
-
+    </ScrollView>
 
 </LinearLayout>

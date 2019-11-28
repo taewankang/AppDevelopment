@@ -7,15 +7,12 @@
     android:id="@+id/parent"
     tools:context=".MainActivity">
 
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/team_name"
+            android:layout_height="100dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="80dp"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:textStyle="bold"/>
+            android:adjustViewBounds="true"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,8 +27,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/pink_project_button"
+            android:fontFamily="@font/kopubdotumlight"
+            android:textColor="#FFFFFF"
             android:onClick="signUp"
-            android:text="회원가입"/>
+            android:text="회원가입" />
 
         <Button
             android:layout_width="match_parent"
@@ -39,6 +38,9 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/pink_project_button"
             android:onClick="login"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="@font/kopubdotummedium"
             android:text="로그인"/>
     </LinearLayout>
 </RelativeLayout>

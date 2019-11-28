@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
     <style name="Menu" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">#000000</item>
@@ -25,6 +26,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20sp</item>
         <item name="android:layout_marginTop">15dp</item>
+        <item name="android:fontFamily">@font/kopubdotumbold</item>
     </style>
 
     <style name="SignUpEditText">
@@ -32,6 +34,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">15dp</item>
         <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@font/kopubdotumbold</item>
     </style>
 
     <style name="match_wrap_ver_LinearLayout">
@@ -104,6 +107,7 @@
         <item name="android:layout_height">20dp</item>
         <item name="android:textSize">15dp</item>
         <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/kopubdotumbold</item>
     </style>
 
 <!--    activity_schedule_one_hour-->
@@ -113,6 +117,7 @@
         <item name="android:layout_weight">4</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/border_line</item>
+        <item name="android:fontFamily">@font/kopubdotumbold</item>
     </style>
 
     <style name="tableRow_textView">
@@ -121,6 +126,7 @@
         <item name="android:layout_weight">4</item>
         <item name="android:background">@drawable/border_line</item>
         <item name="android:clickable">true</item>
+        <item name="android:fontFamily">@font/kopubdotumbold</item>
     </style>
 
     <style name="tableRow_Button">
@@ -156,6 +162,7 @@
         <item name="android:paddingLeft">10dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_weight">10</item>
+        <item name="android:fontFamily">@font/kopubdotumbold</item>
     </style>
 
     <style name="activity_project_contents2_button">

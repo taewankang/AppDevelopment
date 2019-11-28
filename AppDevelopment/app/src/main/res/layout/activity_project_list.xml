@@ -31,6 +31,8 @@
                 android:textSize="20sp"
                 android:id="@+id/large_textView"
                 android:gravity="center"
+                android:fontFamily="@font/kopubdotumbold"
+                android:textStyle="bold"
                 android:text="Large"/>
         </LinearLayout>
         <LinearLayout
@@ -44,6 +46,7 @@
             android:id="@+id/small_textView"
             android:gravity="center"
             android:textSize="10sp"
+            android:fontFamily="@font/kopubdotumbold"
             android:text="small"/>
         </LinearLayout>
     </LinearLayout>

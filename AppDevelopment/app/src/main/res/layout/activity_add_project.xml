@@ -11,20 +11,21 @@
         android:textSize="30dp"
         android:id="@+id/title"
         android:gravity="center"
-        android:layout_marginTop="15dp"
+        android:fontFamily="@font/kopubdotumbold"
         android:textStyle="bold"
+        android:layout_marginTop="15dp"
         android:text="프로젝트 추가"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="프로젝트 이름"
+        android:fontFamily="@font/kopubdotumbold"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_below="@+id/title"
         android:layout_marginTop="15dp"
         android:id="@+id/project_name"/>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,11 +58,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
+        android:fontFamily="@font/kopubdotumbold"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:text="멤버 이메일"
         android:id="@+id/project_member"
         android:layout_below="@+id/project_name_linear"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,6 +84,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
+
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -114,6 +118,7 @@
         android:layout_below="@+id/scrollView"
         android:onClick="onClick"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/kopubdotumbold"
         android:layout_marginBottom="30dp"
         android:text="프로젝트 시작하기"/>
 </RelativeLayout>

@@ -67,7 +67,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {       //아이디값 인스턴스 변수에 대입
         public TextView largeTextView;
         public TextView smallTextView;
-
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
@@ -82,6 +81,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                         String str = title.get(pos);
                         String str1 = title.get(pos).toString();    //이름 넘기기
                         intent.putExtra("project_name", title.get(pos).toString());
+                        intent.putExtra("number", pos);
                         context.startActivity(intent);
                         notifyItemChanged(pos);
                     }

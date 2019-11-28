@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.appdevelopment.ui.alarm.AlarmFragment;
 import com.example.appdevelopment.ui.project.ProjectFragment;
+import com.example.appdevelopment.ui.project.ToDo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,8 @@ public class Menu extends AppCompatActivity {
     private static List<String> project_mini_title = new ArrayList<String>();
     private static Map<String, List<String>> name_list = new HashMap<>();
     private static Map<String, List<String>> email_list = new HashMap<>();
+    private static List<ToDo> todo_list = new ArrayList<>();
+    private static Map<Integer, List<ToDo>> todo_map = new HashMap<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -84,4 +87,16 @@ public class Menu extends AppCompatActivity {
     public static Map<String, List<String>> get_member_list(){return name_list;}
 
     public static Map<String, List<String>> get_Email_list(){return email_list;}
+    public static void set_todo(ToDo todo){
+        todo_list.add(todo);
+    }
+
+    public static void set_todo_map(int number, List<ToDo> todo_list){
+        todo_map.put(number, todo_list);
+    }
+
+    public static List<ToDo> get_todo_map(int number){
+        return todo_map.get(number);
+    }
+    public static List<ToDo> get_todo(){return todo_list;}
 }

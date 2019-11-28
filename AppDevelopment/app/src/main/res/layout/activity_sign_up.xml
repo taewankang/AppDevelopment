@@ -19,6 +19,7 @@
             android:layout_marginTop="20dp"
             android:textSize="30dp"
             android:id="@+id/title"
+            android:fontFamily="@font/kopubdotumbold"
             android:textStyle="bold"/>
          <RelativeLayout
             android:layout_width="match_parent"
@@ -87,6 +88,7 @@
                  android:layout_marginTop="80dp"
                  android:layout_marginBottom="50dp"
                  android:onClick="signUpFinish"
+                 android:fontFamily="@font/kopubdotumbold"
                  android:layout_below="@+id/fourth"/>
          </RelativeLayout>
     </LinearLayout>

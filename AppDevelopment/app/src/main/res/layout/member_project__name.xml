@@ -10,5 +10,6 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:paddingLeft="20dp"
+        android:fontFamily="@font/kopubdotumbold"
         android:id="@+id/title"/>
 </LinearLayout>

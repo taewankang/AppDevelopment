@@ -21,6 +21,7 @@
         android:layout_toRightOf="@+id/profile"
         android:layout_marginLeft="30dp"
         android:textStyle="normal"
+        android:fontFamily="@font/kopubdotumbold"
         android:textSize="30dp"
         android:id="@+id/member"/>
 
