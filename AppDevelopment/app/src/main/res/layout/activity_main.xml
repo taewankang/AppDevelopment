@@ -27,9 +27,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/pink_project_button"
-            android:fontFamily="@font/kopubdotumlight"
+            android:fontFamily="@font/kopubdotummedium"
             android:textColor="#FFFFFF"
             android:onClick="signUp"
+            android:textStyle="bold"
             android:text="회원가입" />
 
         <Button

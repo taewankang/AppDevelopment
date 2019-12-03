@@ -3,6 +3,7 @@ package com.example.appdevelopment.ui.project;
 public class ToDo {
     private int year, month, day, hour, min, meeting; //location은 보낸준 값에서 순서번째를 저장
     private String noon, memo, location;    //오전, 오후
+
     public ToDo(int year, int month, int day, int hour, int min, String location, String noon, String memo, int meeting){
         this.year = year;
         this.month = month;

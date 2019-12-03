@@ -5,11 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
+    android:background="#FFFFFF"
     tools:context=".ui.project.ProjectContents2">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -25,14 +30,21 @@
                 style="@style/Alarm_name"
                 android:gravity="center"
                 android:id="@+id/name"
-                android:textSize="15sp"/>
+                android:textSize="10sp"/>
         </FrameLayout>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_action_search"
+            android:layout_toLeftOf="@+id/search"/>
+
         <Button
             android:id="@+id/search"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_toLeftOf="@+id/add"
             android:background="@drawable/ic_action_delete"/>
+
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -41,13 +53,27 @@
             android:onClick="add_schedule"
             android:background="@drawable/ic_action_add"/>
     </RelativeLayout>
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/project_name"
-        android:layout_marginTop="20dp"
-        android:textSize="30dp"/>
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/project_name"
+            android:layout_marginTop="20dp"
+            android:textColor="#181717"
+            android:fontFamily="@font/kopubdotummedium"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="26dp"/>
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_action_apps"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -87,6 +113,24 @@
                             android:id="@+id/horizontal_linear_schedule">
                         </LinearLayout>
                     </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/activity_project_contents2_frameLayout"
+                android:background="@drawable/deep_rount_rectangle3"
+                android:id="@+id/common_schedule">
+                <LinearLayout
+                    style="@style/activity_project_contents2_linearLayout">
+                    <ImageView
+                        style="@style/activity_project_contents2_imageView"
+                        android:background="@drawable/ic_action_schedule"
+                        android:id="@+id/subway_schedule"/>
+                    <TextView
+                        style="@style/activity_project_contents2_textView"
+                        android:text="공동 시간표"/>
+                    <Button
+                        style="@style/activity_project_contents2_button"/>
                 </LinearLayout>
             </FrameLayout>
 
@@ -142,5 +186,5 @@
             </FrameLayout>
         </LinearLayout>
     </ScrollView>
-
+    </LinearLayout>
 </LinearLayout>

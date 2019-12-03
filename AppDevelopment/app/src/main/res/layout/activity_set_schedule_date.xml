@@ -52,6 +52,4 @@
         android:onClick="setting_finish"
         android:fontFamily="@font/kopubdotumbold"
         android:background="@drawable/pink_project_button"/>
-
-
 </RelativeLayout>

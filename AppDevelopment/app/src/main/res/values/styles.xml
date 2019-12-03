@@ -24,9 +24,10 @@
     <style name="SignUpTextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:layout_marginTop">15dp</item>
         <item name="android:fontFamily">@font/kopubdotumbold</item>
+        <item name="android:textColor">#828181</item>
     </style>
 
     <style name="SignUpEditText">
@@ -57,7 +58,7 @@
     <style name="Login_Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
@@ -122,7 +123,7 @@
 
     <style name="tableRow_textView">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">4</item>
         <item name="android:background">@drawable/border_line</item>
         <item name="android:clickable">true</item>

@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="70dp"
     android:orientation="horizontal"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    android:background="@drawable/deep_rount_rectangle3">
+    android:background="#FFFFFF">
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:id="@+id/imageView"
+        android:layout_gravity="center_vertical"
         android:background="@drawable/project_image"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,31 +22,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:layout_weight="2">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
                 android:id="@+id/large_textView"
-                android:gravity="center"
-                android:fontFamily="@font/kopubdotumbold"
-                android:textStyle="bold"
+                android:fontFamily="@font/kopubdotummedium"
+                android:textColor="#707070"
                 android:text="Large"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:layout_weight="1">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/small_textView"
-            android:gravity="center"
-            android:textSize="10sp"
-            android:fontFamily="@font/kopubdotumbold"
-            android:text="small"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -36,7 +36,9 @@ public class Menu extends AppCompatActivity {
     private static Map<String, List<String>> name_list = new HashMap<>();
     private static Map<String, List<String>> email_list = new HashMap<>();
     private static List<ToDo> todo_list = new ArrayList<>();
-    private static Map<Integer, List<ToDo>> todo_map = new HashMap<>();
+    private static Map<String, List<ToDo>> todo_map = new HashMap<>();  //
+    private static List<ToDo> all_list = new ArrayList<>();
+    private static List<String> title_list = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -54,6 +56,7 @@ public class Menu extends AppCompatActivity {
     public void onStart(){
         super.onStart();
         AlarmFragment.changeID(ID);
+
     }
 
     @Override
@@ -91,12 +94,24 @@ public class Menu extends AppCompatActivity {
         todo_list.add(todo);
     }
 
-    public static void set_todo_map(int number, List<ToDo> todo_list){
-        todo_map.put(number, todo_list);
+    public static void setTodoMap(Map<String, List<ToDo>> todo_map){
+        todo_map = todo_map;
     }
 
-    public static List<ToDo> get_todo_map(int number){
-        return todo_map.get(number);
+    public static Map<String, List<ToDo>> get_todo_map(){
+        return todo_map;
     }
     public static List<ToDo> get_todo(){return todo_list;}
+
+    //모든 할일들을 저장한 데이터
+    public static void setAllList(ToDo list){   //추가 됨
+        all_list.add(list);
+    }
+    public static List<ToDo> getAllList(){return all_list;}
+
+    public static void setTitleList(String str){
+        title_list.add(str);
+    }
+
+    public static List<String> getTitleList(){return title_list;}
 }

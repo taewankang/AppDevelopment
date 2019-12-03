@@ -40,7 +40,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public RecyclerAdapter(Context context, List<String> str1, List<String> str2){                   //인스턴스변수에 초기화
         this.context = context;
         this.title = str1;
-        this.mini_title = str2;
         this.counting = counting;
     }
 
@@ -56,7 +55,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){      //ViewHolder에 초기화
         holder.largeTextView.setText(title.get(position));
-        holder.smallTextView.setText(mini_title.get(position));
     }
 
     @Override
@@ -66,12 +64,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {       //아이디값 인스턴스 변수에 대입
         public TextView largeTextView;
-        public TextView smallTextView;
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
             largeTextView = itemView.findViewById(R.id.large_textView);
-            smallTextView = itemView.findViewById(R.id.small_textView);
             itemView.setOnClickListener(new View.OnClickListener() {     //누르는 이벤트 발생
                 @Override
                 public void onClick(View v) {
